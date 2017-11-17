@@ -64,6 +64,8 @@ function openModal(e) {
   }
 
   // FIXME: hide non-modal content from screen readers
+  var nonModalWrapper = var modal = document.querySelector('.wrapper');
+  nonModalWrapper.setAttribute('aria-hidden', true);
 }
 
 function closeModal() {
@@ -75,4 +77,6 @@ function closeModal() {
   focusedElementBeforeModal.focus();
 
   // FIXME: don't forget to make main content screen reader accessible again.
+  var nonModalWrapper = var modal = document.querySelector('.wrapper');
+  nonModalWrapper.setAttribute('aria-hidden', false);
 }
